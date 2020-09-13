@@ -3,9 +3,35 @@
 
     <head>
         <title>Pokedex 1-20</title>
+        <meta name="description" content="Shows the first 20 pokemon in the pokedex list">
+        <meta name="author" content="Adriana Rodrigues">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
     </head>
 
     <body>
         <h1>Pokedex List from 1-20</h1>
+
+        <h3>Search by Number: 
+            <input type="number" name="numSearch" min="1" max="20">
+            <button type="submit" onClick="alert('Search Results')">Search</button>
+        </h3>
+ 
+        <h3>Search by Name: 
+            <input type="text" name="nameSearch">
+        </h3>
+
+        <ul>
+            <li><img src="images\001.png"> #001 Bulbasaur</li>
+            <li><img src="images\002.png"> #002 Ivysaur</li>
+            <li><img src="images\003.png"> #003 Venusaur</li>
+            <li><img src="images\004.png"> #004 Charmander</li>
+            <li><img src="images\005.png"> #005 Charmeleon</li>
+            <li><img src="images\006.png"> #006 Charizard</li>
+        </ul>
+
+        <p>Images and information taken from <a href="https://www.pokemon.com/us/pokedex/"> Pokemon.com</a></p>
     </body>
+
 </html>
