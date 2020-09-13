@@ -10,4 +10,10 @@ ul {
 img {
     width: 100px;
     height: 100px;
+    vertical-align: middle;
+}
+
+form {
+    font-size: 20px;
+    font-weight: bold;
 }
