@@ -17,3 +17,48 @@ form {
     font-size: 20px;
     font-weight: bold;
 }
+
+grass {
+    background-color: rgb(12, 150, 12);
+    color: white;
+}
+
+poison {
+    background-color: rgb(119, 3, 119);
+    color: white;
+}
+
+fire {
+    background-color: rgb(241, 72, 10);
+    color: white;
+}
+
+flying {
+    background-color: rgb(76, 186, 230);
+    color: white;
+}
+
+dragon {
+    background-color: rgb(85, 11, 182);
+    color: white;
+}
+
+water {
+    background-color: rgb(7, 10, 211);
+    color: white;
+}
+
+bug {
+    background-color: rgb(110, 201, 5);
+    color: white;
+}
+
+normal {
+    background-color: rgb(161, 145, 121);
+    color: white;
+}
+
+dark {
+    background-color: rgb(44, 38, 38);
+    color: white;
+}
