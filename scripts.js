@@ -1,10 +1,10 @@
 
-function numSearch()
+function numsearch()
 {
     return 'result of num search';
 }
 
-function nameSearch()
+function namesearch()
 {
     return 'result of name search';
 }
