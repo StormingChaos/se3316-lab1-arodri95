@@ -11,6 +11,7 @@ class Pokemon
         this.ability1 = ability1;
         this.ability2 = ability2;
         this.image = "images\\" + image;
+        this.shiny = this.image.slice(0,10) + "s" + this.image.slice(10);
         this.twotypes = twotypes;
         this.twoabilities = twoabilities;
         this.desc = desc;
@@ -18,7 +19,8 @@ class Pokemon
 
     printpokemon()
     {
-        let text = "<li><img src=\"" + this.image + "\"> #" + this.number + " " + this.name + "  " + 
+        let text = "<li><img src=\"" + this.image + "\"> <img src=\"" + this.shiny + "\"> #" + 
+                this.number + " " + this.name + "  " + 
                 "<" + this.type1 + ">" + this.type1 + "</" + this.type1 + ">  ";
 
         if (this.twotypes)
