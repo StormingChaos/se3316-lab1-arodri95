@@ -17,6 +17,7 @@ class Pokemon
         this.desc = desc;
     }
 
+    //returns the pokemon as a list element in HTML
     printpokemon()
     {
         let text = "<li><img src=\"" + this.image + "\"> <img src=\"" + this.shiny + "\"> #" + 
@@ -78,20 +79,58 @@ pokemonList[29] = new Pokemon("019_alola.png", "019", "Alolan Rattata", "Dark", 
 pokemonList[30] = new Pokemon("020.png", "020", "Raticate", "Normal", "", "Run Away", "Guts", false, true, "Has an Alolan form, evolves from Rattata");
 pokemonList[31] = new Pokemon("020_alola.png", "020", "Alolan Raticate", "Dark", "Normal", "Hustle", "Gluttony", true, true, "Alolan form of Raticate, evolves from Alolan Rattata");
 
-function numsearch()
+//array for search results
+var list = new Array();
+
+function search_num()
 {
-    return 'result of num search';
+    var myWindow = window.open("searchwindow.html");
+    var input = document.getElementById("numSearch").elements.namedItem("numInput").value;
+   
+    //INSERT SEARCH ALGORITHM
+    for (index = 0; index < pokemonList.length || list.length == 5; index++)
+    {
+        if (pokemonList[index].number.search(input) != -1)
+        {
+            list.push(pokemonList[index]);
+        }
+    }
+
+    var search = "<ul>";
+    //INSERT LIST
+    for(pokemon of list)
+    {
+        search+= pokemon.printpokemon();
+    }
+    search+= "</ul>";
+    //document.getElementById("searchlist").innerHTML = search;
+    myWindow.document.write(search);
+    //myWindow.onload = myWindow.document.body.insertAdjacentHTML('afterbegin', search);
 }
 
-function namesearch()
+function search_name()
 {
-    return 'result of name search';
-}
+    var myWindow = window.open("searchwindow.html");
+    var input = document.getElementById("nameSearch").elements.namedItem("nameInput").value;
 
-function printlist()
-{
-    var result ="<ul><li>test</li></ul>";
-    return result;
+    //INSERT SEARCH ALGORITHM
+    for (index = 0; index < pokemonList.length || list.length == 5; index++)
+    {
+        if (pokemonList[index].name.search(input) != -1)
+        {
+            list.push(pokemonList[index]);
+        }
+    }
+    
+    var search = "<ul>";
+    //INSERT LIST
+    for(pokemon of list)
+    {
+        search+= pokemon.printpokemon();
+    }
+    search+= "</ul>";
+    //document.getElementById("searchlist").innerHTML = search;
+    myWindow.document.write(search);
 }
 
 window.onload = printlist;

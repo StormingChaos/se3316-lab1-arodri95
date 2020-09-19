@@ -13,15 +13,15 @@
 <body>
     <h1>Pokedex List from 1-20</h1>
 
-    <form onsubmit="alert(numsearch())">
+    <form id="numSearch" onsubmit="search_num(); return false">
     <label for="numSearch">Search by number:</label>
-    <input type="number" id="numSearch" name="numSearch" min="1" max="20">
+    <input type="number" name="numInput" min="1" max="20">
     <input type="submit" value="Search">
     </form>
 
-    <form onsubmit="alert(namesearch())">
+    <form id="nameSearch" onsubmit="search_name(); return false">
     <label for="nameSearch">Search by name:</label>
-    <input type="text" id="nameSearch" name="nameSearch" maxlength="20">
+    <input type="text" name="nameInput" maxlength="20">
     <input type="submit" value="Search">
     </form>
 
