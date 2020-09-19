@@ -84,6 +84,7 @@ var list = new Array();
 
 function search_num()
 {
+    list = [];
     var myWindow = window.open("searchwindow.html");
     var input = document.getElementById("numSearch").elements.namedItem("numInput").value;
    
@@ -110,13 +111,14 @@ function search_num()
 
 function search_name()
 {
+    list = [];
     var myWindow = window.open("searchwindow.html");
     var input = document.getElementById("nameSearch").elements.namedItem("nameInput").value;
 
     //INSERT SEARCH ALGORITHM
     for (index = 0; index < pokemonList.length || list.length == 5; index++)
     {
-        if (pokemonList[index].name.search(input) != -1)
+        if (pokemonList[index].name.toLowerCase().search(input.toLowerCase()) != -1)
         {
             list.push(pokemonList[index]);
         }
