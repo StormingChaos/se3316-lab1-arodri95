@@ -85,7 +85,6 @@ var list = new Array();
 function search_num()
 {
     list = [];
-    var myWindow = window.open("searchwindow.html");
     var input = document.getElementById("numSearch").elements.namedItem("numInput").value;
    
     //INSERT SEARCH ALGORITHM
@@ -104,15 +103,14 @@ function search_num()
         search+= pokemon.printpokemon();
     }
     search+= "</ul>";
-    //document.getElementById("searchlist").innerHTML = search;
-    myWindow.document.write(search);
-    //myWindow.onload = myWindow.document.body.insertAdjacentHTML('afterbegin', search);
+    
+    document.getElementById("list").innerHTML = search;
+    //myWindow.document.write(search);
 }
 
 function search_name()
 {
     list = [];
-    var myWindow = window.open("searchwindow.html");
     var input = document.getElementById("nameSearch").elements.namedItem("nameInput").value;
 
     //INSERT SEARCH ALGORITHM
@@ -131,8 +129,9 @@ function search_name()
         search+= pokemon.printpokemon();
     }
     search+= "</ul>";
-    //document.getElementById("searchlist").innerHTML = search;
-    myWindow.document.write(search);
+
+    document.getElementById("list").innerHTML = search;
+    //myWindow.document.write(search);
 }
 
 window.onload = printlist;
