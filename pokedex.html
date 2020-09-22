@@ -14,14 +14,14 @@
     <h1>Pokedex List from 1-20</h1>
 
     <form id="numSearch" onsubmit="search_num(); return false">
-    <label for="numSearch">Search by number:</label>
-    <input type="number" name="numInput" min="1" max="20">
+    <label for="numInput">Search by number:</label>
+    <input id="numInput" type="number" name="numInput" min="1" max="20">
     <input type="submit" value="Search">
     </form>
 
     <form id="nameSearch" onsubmit="search_name(); return false">
-    <label for="nameSearch">Search by name:</label>
-    <input type="text" name="nameInput" maxlength="20">
+    <label for="nameInput">Search by name:</label>
+    <input id="nameInput" type="text" name="nameInput" maxlength="20">
     <input type="submit" value="Search">
     </form>
 
