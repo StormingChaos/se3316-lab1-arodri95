@@ -88,7 +88,7 @@ function search_num()
     var input = document.getElementById("numSearch").elements.namedItem("numInput").value;
    
     //INSERT SEARCH ALGORITHM
-    for (index = 0; index < pokemonList.length || list.length == 5; index++)
+    for (index = 0; index < pokemonList.length && list.length < 5; index++)
     {
         if (pokemonList[index].number.search(input) != -1)
         {
@@ -105,7 +105,6 @@ function search_num()
     search+= "</ul>";
     
     document.getElementById("list").innerHTML = search;
-    //myWindow.document.write(search);
 }
 
 function search_name()
@@ -114,7 +113,7 @@ function search_name()
     var input = document.getElementById("nameSearch").elements.namedItem("nameInput").value;
 
     //INSERT SEARCH ALGORITHM
-    for (index = 0; index < pokemonList.length || list.length == 5; index++)
+    for (index = 0; index < pokemonList.length && list.length < 5; index++)
     {
         if (pokemonList[index].name.toLowerCase().search(input.toLowerCase()) != -1)
         {
@@ -131,7 +130,6 @@ function search_name()
     search+= "</ul>";
 
     document.getElementById("list").innerHTML = search;
-    //myWindow.document.write(search);
 }
 
 window.onload = printlist;
