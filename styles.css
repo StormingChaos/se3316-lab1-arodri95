@@ -1,10 +1,20 @@
 li {
     border: 2px solid black;
     width: 500px;
+    background-color: #ffffff5e;
 }
 
 ul {
     list-style-type:none;
+}
+
+body {
+    background-color: #BC2720;
+}
+
+#searchResults {
+    background-color: rgb(18, 90, 185);
+    width: 50%;
 }
 
 img {
