@@ -146,6 +146,11 @@ function search_num()
     var element = document.getElementById("searchResults");
     element.textContent = "";
     element.appendChild(sresult);
+
+    if (input == "")
+    {
+        resetsearch();
+    }
 }
 
 function search_name()
@@ -172,6 +177,11 @@ function search_name()
     var element = document.getElementById("searchResults");
     element.textContent = "";
     element.appendChild(sresult);
+
+    if (input == "")
+    {
+        resetsearch();
+    }
 }
 
 window.onload = printlist;
