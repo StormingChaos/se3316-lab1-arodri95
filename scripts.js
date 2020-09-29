@@ -20,25 +20,66 @@ class Pokemon
     //returns the pokemon as a list element in HTML
     printpokemon()
     {
-        let text = "<li><img src=\"" + this.image + "\"> <img src=\"" + this.shiny + "\"> #" + 
-                this.number + " " + this.name + "  " + 
-                "<" + this.type1 + ">" + this.type1 + "</" + this.type1 + ">  ";
+        //create the list item
+        var pokeData = document.createElement("li");
+        //create the two images
+        var image = document.createElement("img");
+        var sImage = document.createElement("img");
+        //set the image attributes
+        image.setAttribute("src", this.image);
+        sImage.setAttribute("src", this.shiny);
+        //append image to list item
+        pokeData.appendChild(image);
+        pokeData.appendChild(sImage);
 
+        //add text node
+        var pokeName = document.createTextNode("#"+this.number+" "+this.name+ " ");
+        pokeData.appendChild(pokeName);
+
+        //create and fill type node
+        var typeNode1 = document.createElement(this.type1);
+        var type1Text = document.createTextNode(this.type1);
+        typeNode1.appendChild(type1Text);
+        pokeData.appendChild(typeNode1);
+
+        //add a space for formatting
+        var space = document.createTextNode(" ");
+        pokeData.appendChild(space);
+
+        //check for type 2
         if (this.twotypes)
         {
-            text+= "<" + this.type2 + ">" + this.type2 + "</" + this.type2 + ">";
+            var typeNode2 = document.createElement(this.type2);
+            var type2Text = document.createTextNode(this.type2);
+            typeNode2.appendChild(type2Text);
+            pokeData.appendChild(typeNode2);
         }
 
-        text+= "<p>Abilities: " + this.ability1;
-
+        //create ability node
+        var abilityNode = document.createElement("p");
+        var abilText;
         if (this.twoabilities)
         {
-            text+= ", " + this.ability2;
+            abilText = document.createTextNode("Abilities: "+this.ability1+", "+this.ability2);
         }
+        else{
+            abilText = document.createTextNode("Abilities: "+this.ability1);
+        }
+        abilityNode.appendChild(abilText);
 
-        text+= "<br>" + this.desc + "</p></li>";
+        //create line break
+        var br = document.createElement("br");
+        abilityNode.appendChild(br);
+
+        //create descirption
+        var desc = document.createTextNode(this.desc);
+        abilityNode.appendChild(desc);
+
+        //append ability node
+        pokeData.appendChild(abilityNode);
         
-        return text;
+        //return the completed list element
+        return pokeData;
     }
 }
 
@@ -134,14 +175,13 @@ function search_name()
 
 window.onload = printlist;
 function printlist()
-{
-    var result ="<ul>";
-    
+{   
+    var pokeList = document.createElement("ul");
     for(pokemon of pokemonList)
     {
-        result+= pokemon.printpokemon();
+        pokeList.appendChild(pokemon.printpokemon());
     }
 
-    result+= "</ul>";
-    document.getElementById("list").innerHTML = result;
+    var element = document.getElementById("list");
+    element.appendChild(pokeList);
 }
