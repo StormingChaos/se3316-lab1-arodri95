@@ -116,7 +116,7 @@ pokemonList[25] = new Pokemon("017.png", "017", "Pidgeotto", "Normal", "Flying",
 pokemonList[26] = new Pokemon("018.png", "018", "Pidgeot", "Normal", "Flying", "Keen Eye", "Tangled Feet", true, true, "Can mega evolve, evolves from Pidgeotto");
 pokemonList[27] = new Pokemon("018_mega.png", "018", "Mega Pidgeot", "Normal", "Flying", "No Guard", "", true, false, "Mega Evolution of Pidgeot");
 pokemonList[28] = new Pokemon("019.png", "019", "Rattata", "Normal", "", "Run Away", "Guts", false, true, "Has an Alolan form, evolves into Raticate");
-pokemonList[29] = new Pokemon("019_alola.png", "019", "Alolan Rattata", "Dark", "Normal", "Hustle", "Gluttony", true, true, "Alolan form of Rattata, evolves into ALolan Raticate");
+pokemonList[29] = new Pokemon("019_alola.png", "019", "Alolan Rattata", "Dark", "Normal", "Hustle", "Gluttony", true, true, "Alolan form of Rattata, evolves into Alolan Raticate");
 pokemonList[30] = new Pokemon("020.png", "020", "Raticate", "Normal", "", "Run Away", "Guts", false, true, "Has an Alolan form, evolves from Rattata");
 pokemonList[31] = new Pokemon("020_alola.png", "020", "Alolan Raticate", "Dark", "Normal", "Hustle", "Gluttony", true, true, "Alolan form of Raticate, evolves from Alolan Rattata");
 
