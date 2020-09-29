@@ -145,7 +145,7 @@ function search_num()
     }
     search+= "</ul>";
     
-    document.getElementById("list").innerHTML = search;
+    document.getElementById("searchResults").innerHTML = search;
 }
 
 function search_name()
@@ -161,16 +161,17 @@ function search_name()
             list.push(pokemonList[index]);
         }
     }
-    
-    var search = "<ul>";
-    //INSERT LIST
-    for(pokemon of list)
-    {
-        search+= pokemon.printpokemon();
-    }
-    search+= "</ul>";
 
-    document.getElementById("list").innerHTML = search;
+    //NEW STUFF
+    var sresult = document.createElement("ul");
+    for (pokemon of list)
+    {
+        sresult.appendChild(pokemon.printpokemon());
+    }
+
+    var element = document.getElementById("searchResults");
+    element.textContent = "";
+    element.appendChild(sresult);
 }
 
 window.onload = printlist;
