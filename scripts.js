@@ -186,3 +186,9 @@ function printlist()
     var element = document.getElementById("list");
     element.appendChild(pokeList);
 }
+
+function resetsearch()
+{
+    var element = document.getElementById("searchResults");
+    element.textContent = "";
+}
