@@ -137,15 +137,15 @@ function search_num()
         }
     }
 
-    var search = "<ul>";
     //INSERT LIST
+    var sresult = document.createElement("ul");
     for(pokemon of list)
     {
-        search+= pokemon.printpokemon();
+        sresult.appendChild(pokemon.printpokemon());
     }
-    search+= "</ul>";
-    
-    document.getElementById("searchResults").innerHTML = search;
+    var element = document.getElementById("searchResults");
+    element.textContent = "";
+    element.appendChild(sresult);
 }
 
 function search_name()
